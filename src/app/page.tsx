@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Home() {
   const socialLinks = [
     { name: "GitHub", url: "https://github.com/Mandalorian7773", icon: "github.png" },
-    { name: "LinkedIn", url: "https://www.linkedin.com/in/aditya-jagrani-270917317", icon: "github.png" },
+    
     { name: "DevPals", url: "https://devpals.in", icon: "github.png" }
   ];
 
@@ -44,7 +44,7 @@ export default function Home() {
     >
       {/* Profile Card */}
       <div className="flex items-center justify-center col-span-6 bg-white/10 p-4 rounded-3xl justify-center gap-10 backdrop-blur-sm border border-white/20">
-        <img src={'pfp.jpg'} className="rounded-full h-52 w-auto" alt="Profile Picture" />
+        <img src={'pfp.jpg'} className="rounded-full h-52 w-52 object-cover" alt="Profile Picture" />
         <div>
           <p className="text-white text-5xl font-bold">Aditya Jagrani</p>
           <p className="text-white text-xl font-medium">Web, Web3 & Automations Dev <br /></p>
