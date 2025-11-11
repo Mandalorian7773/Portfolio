@@ -1,10 +1,11 @@
 "use client";
 
+import Link from "next/link";
 import {
   NavigationMenu,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
+  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
 export default function Navbar() {
@@ -13,16 +14,14 @@ export default function Navbar() {
       <NavigationMenu className=" w-full max-w-7xl py-4 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl shadow-md">
         <NavigationMenuList className="flex justify-center gap-10 text-lg font-black tracking-wide">
           <NavigationMenuItem>
-            <NavigationMenuLink className="cursor-pointer text-base">Home</NavigationMenuLink>
+            <Link href="/" className={navigationMenuTriggerStyle()}>
+              Home
+            </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuLink className="cursor-pointer text-base">Projects</NavigationMenuLink>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuLink className="cursor-pointer text-base">Contact</NavigationMenuLink>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuLink className="cursor-pointer text-base">About</NavigationMenuLink>
+            <Link href="/projects" className={navigationMenuTriggerStyle()}>
+              Projects
+            </Link>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
